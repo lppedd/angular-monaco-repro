@@ -3,7 +3,6 @@
 1. Run `npm install`
 2. Run `npm run start`
 3. Open the browser's console and verify you see the following error:
-
    ```text
    ERROR ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
      at new CodeEditorWidget (codeEditorWidget.js:69:252)
@@ -18,7 +17,7 @@
      at callHooks (debug_node.mjs:841:17)
    ```
 
-## Working setup with 20.3.9 and babel/preset-env 7.27.2
+## Working setup with 20.3.9 and `@babel/preset-env` 7.27.2
 
 1. Run `npx npkill` and clear any cache/build directory
 2. Switch to the `angular-20.3.9` branch
@@ -26,7 +25,7 @@
 4. Run `npm run start`
 5. Verify no errors are present in the browser's console
 
-## Working setup with 20.1.6 and babel/preset-env 7.27.2
+## Working setup with 20.1.6 and `@babel/preset-env` 7.27.2
 
 1. Run `npx npkill` and clear any cache/build directory
 2. Switch to the `angular-20.1.6` branch
