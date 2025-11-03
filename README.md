@@ -17,3 +17,19 @@
      at callHook (debug_node.mjs:887:13)
      at callHooks (debug_node.mjs:841:17)
    ```
+
+## Working setup with 20.3.9 and babel/preset-env 7.27.2
+
+1. Run `npx npkill` and clear any cache/build directory
+2. Switch to the `angular-20.3.9` branch
+3. Run `npm install`
+4. Run `npm run start`
+5. Verify no errors are present in the browser's console
+
+## Working setup with 20.1.6 and babel/preset-env 7.27.2
+
+1. Run `npx npkill` and clear any cache/build directory
+2. Switch to the `angular-20.1.6` branch
+3. Run `npm install`
+4. Run `npm run start`
+5. Verify no errors are present in the browser's console
