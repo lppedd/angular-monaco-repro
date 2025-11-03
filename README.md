@@ -17,7 +17,18 @@
      at callHooks (debug_node.mjs:841:17)
    ```
 
-## Working setup with 20.3.9 and `@babel/preset-env` 7.27.2
+### Working setup with 20.3.9 and `transform-class-static-block@7.27.1`
+
+To work around the problem, I've come to the conclusion the only dependency
+we must override is `@babel/plugin-transform-class-static-block`:
+
+```json
+"overrides": {
+  "@babel/plugin-transform-class-static-block": "7.27.1"
+}
+```
+
+To reproduce that running the example now works:
 
 1. Run `npx npkill` and clear any cache/build directory
 2. Switch to the `angular-20.3.9` branch
@@ -25,7 +36,18 @@
 4. Run `npm run start`
 5. Verify no errors are present in the browser's console
 
-## Working setup with 20.1.6 and `@babel/preset-env` 7.27.2
+### Working setup with 20.1.6 and `transform-class-static-block@7.27.1`
+
+To work around the problem, I've come to the conclusion the only dependency
+we must override is `@babel/plugin-transform-class-static-block`:
+
+```json
+"overrides": {
+  "@babel/plugin-transform-class-static-block": "7.27.1"
+}
+```
+
+To reproduce that running the example now works:
 
 1. Run `npx npkill` and clear any cache/build directory
 2. Switch to the `angular-20.1.6` branch
