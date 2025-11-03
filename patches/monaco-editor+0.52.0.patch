@@ -1,0 +1,1396 @@
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionViewItems.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionViewItems.js
+index 4df6d28..6034d23 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionViewItems.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionViewItems.js
+@@ -12,7 +12,7 @@ import { Action, ActionRunner, Separator } from '../../../common/actions.js';
+ import { Disposable } from '../../../common/lifecycle.js';
+ import * as platform from '../../../common/platform.js';
+ import * as types from '../../../common/types.js';
+-import './actionbar.css';
++// import './actionbar.css';
+ import * as nls from '../../../../nls.js';
+ import { getBaseLayerHoverDelegate } from '../hover/hoverDelegate2.js';
+ export class BaseActionViewItem extends Disposable {
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionbar.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionbar.js
+index 445c3e5..55e4236 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionbar.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/actionbar/actionbar.js
+@@ -10,7 +10,7 @@ import { ActionRunner, Separator } from '../../../common/actions.js';
+ import { Emitter } from '../../../common/event.js';
+ import { Disposable, DisposableMap, DisposableStore, dispose } from '../../../common/lifecycle.js';
+ import * as types from '../../../common/types.js';
+-import './actionbar.css';
++// import './actionbar.css';
+ export class ActionBar extends Disposable {
+     constructor(container, options = {}) {
+         super();
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.js
+index 5d5a76c..9026c80 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/aria/aria.js
+@@ -3,7 +3,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ import * as dom from '../../dom.js';
+-import './aria.css';
++// import './aria.css';
+ // Use a max length since we are inserting the whole msg in the DOM and that can cause browsers to freeze for long messages #94233
+ const MAX_MESSAGE_LENGTH = 20000;
+ let ariaContainer;
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/breadcrumbs/breadcrumbsWidget.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/breadcrumbs/breadcrumbsWidget.js
+index af89135..dfec358 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/breadcrumbs/breadcrumbsWidget.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/breadcrumbs/breadcrumbsWidget.js
+@@ -1 +1 @@
+-import './breadcrumbsWidget.css';
++// import './breadcrumbsWidget.css';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/button/button.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/button/button.js
+index 954a61f..bf0d8b1 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/button/button.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/button/button.js
+@@ -10,7 +10,7 @@ import { Emitter } from '../../../common/event.js';
+ import { isMarkdownString, markdownStringEqual } from '../../../common/htmlContent.js';
+ import { Disposable } from '../../../common/lifecycle.js';
+ import { ThemeIcon } from '../../../common/themables.js';
+-import './button.css';
++// import './button.css';
+ import { getBaseLayerHoverDelegate } from '../hover/hoverDelegate2.js';
+ export const unthemedButtonStyles = {
+     buttonBackground: '#0E639C',
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/codicons/codiconStyles.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/codicons/codiconStyles.js
+index cc0b2b3..1a8cd9b 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/codicons/codiconStyles.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/codicons/codiconStyles.js
+@@ -2,5 +2,5 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './codicon/codicon.css';
+-import './codicon/codicon-modifiers.css';
++// import './codicon/codicon.css';
++// import './codicon/codicon-modifiers.css';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/contextview/contextview.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/contextview/contextview.js
+index ff9a292..e8fceb9 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/contextview/contextview.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/contextview/contextview.js
+@@ -7,7 +7,7 @@ import * as DOM from '../../dom.js';
+ import { Disposable, DisposableStore, toDisposable } from '../../../common/lifecycle.js';
+ import * as platform from '../../../common/platform.js';
+ import { Range } from '../../../common/range.js';
+-import './contextview.css';
++// import './contextview.css';
+ export function isAnchor(obj) {
+     const anchor = obj;
+     return !!anchor && typeof anchor.x === 'number' && typeof anchor.y === 'number';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/countBadge/countBadge.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/countBadge/countBadge.js
+index a1498d5..c030b5c 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/countBadge/countBadge.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/countBadge/countBadge.js
+@@ -4,7 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ import { $, append } from '../../dom.js';
+ import { format } from '../../../common/strings.js';
+-import './countBadge.css';
++// import './countBadge.css';
+ export class CountBadge {
+     constructor(container, options, styles) {
+         this.options = options;
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/dialog/dialog.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/dialog/dialog.js
+index d372d9c..261c3a1 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/dialog/dialog.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/dialog/dialog.js
+@@ -1 +1 @@
+-import './dialog.css';
++// import './dialog.css';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/dropdown/dropdown.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/dropdown/dropdown.js
+index 7d69a90..404c85c 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/dropdown/dropdown.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/dropdown/dropdown.js
+@@ -7,7 +7,7 @@ import { StandardKeyboardEvent } from '../../keyboardEvent.js';
+ import { EventType as GestureEventType, Gesture } from '../../touch.js';
+ import { ActionRunner } from '../../../common/actions.js';
+ import { Emitter } from '../../../common/event.js';
+-import './dropdown.css';
++// import './dropdown.css';
+ class BaseDropdown extends ActionRunner {
+     constructor(container, options) {
+         super();
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/dropdown/dropdownActionViewItem.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/dropdown/dropdownActionViewItem.js
+index 5d7cf79..0c6cbec 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/dropdown/dropdownActionViewItem.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/dropdown/dropdownActionViewItem.js
+@@ -2,7 +2,7 @@ import { $, append } from '../../dom.js';
+ import { BaseActionViewItem } from '../actionbar/actionViewItems.js';
+ import { DropdownMenu } from './dropdown.js';
+ import { Emitter } from '../../../common/event.js';
+-import './dropdown.css';
++// import './dropdown.css';
+ import { getDefaultHoverDelegate } from '../hover/hoverDelegateFactory.js';
+ import { getBaseLayerHoverDelegate } from '../hover/hoverDelegate2.js';
+ export class DropdownMenuActionViewItem extends BaseActionViewItem {
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInput.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInput.js
+index 0eaa81a..b8475e8 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInput.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInput.js
+@@ -7,7 +7,7 @@ import { CaseSensitiveToggle, RegexToggle, WholeWordsToggle } from './findInputT
+ import { HistoryInputBox } from '../inputbox/inputBox.js';
+ import { Widget } from '../widget.js';
+ import { Emitter } from '../../../common/event.js';
+-import './findInput.css';
++// import './findInput.css';
+ import * as nls from '../../../../nls.js';
+ import { DisposableStore, MutableDisposable } from '../../../common/lifecycle.js';
+ import { createInstantHoverDelegate } from '../hover/hoverDelegateFactory.js';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/replaceInput.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/replaceInput.js
+index 0953fbd..5f10165 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/replaceInput.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/replaceInput.js
+@@ -8,7 +8,7 @@ import { HistoryInputBox } from '../inputbox/inputBox.js';
+ import { Widget } from '../widget.js';
+ import { Codicon } from '../../../common/codicons.js';
+ import { Emitter } from '../../../common/event.js';
+-import './findInput.css';
++// import './findInput.css';
+ import * as nls from '../../../../nls.js';
+ import { getDefaultHoverDelegate } from '../hover/hoverDelegateFactory.js';
+ const NLS_DEFAULT_LABEL = nls.localize('defaultLabel', "input");
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/hover/hoverWidget.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/hover/hoverWidget.js
+index 35e7230..95f339a 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/hover/hoverWidget.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/hover/hoverWidget.js
+@@ -6,7 +6,7 @@ import * as dom from '../../dom.js';
+ import { StandardKeyboardEvent } from '../../keyboardEvent.js';
+ import { DomScrollableElement } from '../scrollbar/scrollableElement.js';
+ import { Disposable } from '../../../common/lifecycle.js';
+-import './hoverWidget.css';
++// import './hoverWidget.css';
+ import { localize } from '../../../../nls.js';
+ const $ = dom.$;
+ export class HoverWidget extends Disposable {
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/iconLabel/iconLabel.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/iconLabel/iconLabel.js
+index 4459c50..b7bde23 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/iconLabel/iconLabel.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/iconLabel/iconLabel.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './iconlabel.css';
++// import './iconlabel.css';
+ import * as dom from '../../dom.js';
+ import { HighlightedLabel } from '../highlightedlabel/highlightedLabel.js';
+ import { Disposable } from '../../../common/lifecycle.js';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.js
+index 55a96a2..71796d4 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/inputbox/inputBox.js
+@@ -14,7 +14,7 @@ import { Widget } from '../widget.js';
+ import { Emitter, Event } from '../../../common/event.js';
+ import { HistoryNavigator } from '../../../common/history.js';
+ import { equals } from '../../../common/objects.js';
+-import './inputBox.css';
++// import './inputBox.css';
+ import * as nls from '../../../../nls.js';
+ const $ = dom.$;
+ export const unthemedInboxStyles = {
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.js
+index 0fd9144..a73a759 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/keybindingLabel/keybindingLabel.js
+@@ -8,7 +8,7 @@ import { getDefaultHoverDelegate } from '../hover/hoverDelegateFactory.js';
+ import { UILabelProvider } from '../../../common/keybindingLabels.js';
+ import { Disposable } from '../../../common/lifecycle.js';
+ import { equals } from '../../../common/objects.js';
+-import './keybindingLabel.css';
++// import './keybindingLabel.css';
+ import { localize } from '../../../../nls.js';
+ const $ = dom.$;
+ export const unthemedKeybindingLabelOptions = {
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/list/listPaging.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/list/listPaging.js
+index 322eb48..6794182 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/list/listPaging.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/list/listPaging.js
+@@ -6,7 +6,7 @@ import { range } from '../../../common/arrays.js';
+ import { CancellationTokenSource } from '../../../common/cancellation.js';
+ import { Event } from '../../../common/event.js';
+ import { Disposable } from '../../../common/lifecycle.js';
+-import './list.css';
++// import './list.css';
+ import { List } from './listWidget.js';
+ class PagedRenderer {
+     get templateId() { return this.renderer.templateId; }
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/list/listWidget.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/list/listWidget.js
+index 416fdc7..3fc4f10 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/list/listWidget.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/list/listWidget.js
+@@ -24,7 +24,7 @@ import { DisposableStore, dispose } from '../../../common/lifecycle.js';
+ import { clamp } from '../../../common/numbers.js';
+ import * as platform from '../../../common/platform.js';
+ import { isNumber } from '../../../common/types.js';
+-import './list.css';
++// import './list.css';
+ import { ListError } from './list.js';
+ import { ListView } from './listView.js';
+ import { StandardMouseEvent } from '../../mouseEvent.js';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/mouseCursor/mouseCursor.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/mouseCursor/mouseCursor.js
+index 6ea890a..8d9e564 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/mouseCursor/mouseCursor.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/mouseCursor/mouseCursor.js
+@@ -2,5 +2,5 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './mouseCursor.css';
++// import './mouseCursor.css';
+ export const MOUSE_CURSOR_TEXT_CSS_CLASS_NAME = `monaco-mouse-cursor-text`;
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.js
+index b2f82c2..8e263ff 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/progressbar/progressbar.js
+@@ -5,7 +5,7 @@
+ import { show } from '../../dom.js';
+ import { RunOnceScheduler } from '../../../common/async.js';
+ import { Disposable, MutableDisposable } from '../../../common/lifecycle.js';
+-import './progressbar.css';
++// import './progressbar.css';
+ const CSS_DONE = 'done';
+ const CSS_ACTIVE = 'active';
+ const CSS_INFINITE = 'infinite';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/radio/radio.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/radio/radio.js
+index 546ce19..58f9fa3 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/radio/radio.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/radio/radio.js
+@@ -1 +1 @@
+-import './radio.css';
++// import './radio.css';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
+index 2fbf839..3b92836 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/sash/sash.js
+@@ -16,7 +16,7 @@ import { memoize } from '../../../common/decorators.js';
+ import { Emitter } from '../../../common/event.js';
+ import { Disposable, DisposableStore, toDisposable } from '../../../common/lifecycle.js';
+ import { isMacintosh } from '../../../common/platform.js';
+-import './sash.css';
++// import './sash.css';
+ /**
+  * Allow the sashes to be visible at runtime.
+  * @remark Use for development purposes only.
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/scrollableElement.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/scrollableElement.js
+index 633002e..f831d14 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/scrollableElement.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/scrollbar/scrollableElement.js
+@@ -14,7 +14,7 @@ import { Emitter } from '../../../common/event.js';
+ import { dispose } from '../../../common/lifecycle.js';
+ import * as platform from '../../../common/platform.js';
+ import { Scrollable } from '../../../common/scrollable.js';
+-import './media/scrollbars.css';
++// import './media/scrollbars.css';
+ const HIDE_TIMEOUT = 500;
+ const SCROLL_WHEEL_SENSITIVITY = 50;
+ const SCROLL_WHEEL_SMOOTH_SCROLL_ENABLED = true;
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/selectBox/selectBox.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/selectBox/selectBox.js
+index 3203788..8ac7d91 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/selectBox/selectBox.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/selectBox/selectBox.js
+@@ -6,7 +6,7 @@ import { SelectBoxList } from './selectBoxCustom.js';
+ import { SelectBoxNative } from './selectBoxNative.js';
+ import { Widget } from '../widget.js';
+ import { isMacintosh } from '../../../common/platform.js';
+-import './selectBox.css';
++// import './selectBox.css';
+ export class SelectBox extends Widget {
+     constructor(options, selected, contextViewProvider, styles, selectBoxOptions) {
+         super();
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/selectBox/selectBoxCustom.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/selectBox/selectBoxCustom.js
+index de9c51a..e28ed3f 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/selectBox/selectBoxCustom.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/selectBox/selectBoxCustom.js
+@@ -14,7 +14,7 @@ import { Emitter, Event } from '../../../common/event.js';
+ import { KeyCodeUtils } from '../../../common/keyCodes.js';
+ import { Disposable } from '../../../common/lifecycle.js';
+ import { isMacintosh } from '../../../common/platform.js';
+-import './selectBoxCustom.css';
++// import './selectBoxCustom.css';
+ import { localize } from '../../../../nls.js';
+ const $ = dom.$;
+ const SELECT_OPTION_ENTRY_TEMPLATE_ID = 'selectOption.entry.template';
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/splitview/splitview.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/splitview/splitview.js
+index 6627e85..97eba1f 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/splitview/splitview.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/splitview/splitview.js
+@@ -13,7 +13,7 @@ import { combinedDisposable, Disposable, dispose, toDisposable } from '../../../
+ import { clamp } from '../../../common/numbers.js';
+ import { Scrollable } from '../../../common/scrollable.js';
+ import * as types from '../../../common/types.js';
+-import './splitview.css';
++// import './splitview.css';
+ const defaultStyles = {
+     separatorBorder: Color.transparent
+ };
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/table/tableWidget.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/table/tableWidget.js
+index 9504272..299b26f 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/table/tableWidget.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/table/tableWidget.js
+@@ -9,7 +9,7 @@ import { List, unthemedListStyles } from '../list/listWidget.js';
+ import { SplitView } from '../splitview/splitview.js';
+ import { Emitter, Event } from '../../../common/event.js';
+ import { Disposable, DisposableStore } from '../../../common/lifecycle.js';
+-import './table.css';
++// import './table.css';
+ class TableListRenderer {
+     static { this.TemplateId = 'row'; }
+     constructor(columns, renderers, getColumnSize) {
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/toggle/toggle.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/toggle/toggle.js
+index 9e38e8a..22d128b 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/toggle/toggle.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/toggle/toggle.js
+@@ -5,7 +5,7 @@
+ import { Widget } from '../widget.js';
+ import { ThemeIcon } from '../../../common/themables.js';
+ import { Emitter } from '../../../common/event.js';
+-import './toggle.css';
++// import './toggle.css';
+ import { getDefaultHoverDelegate } from '../hover/hoverDelegateFactory.js';
+ import { getBaseLayerHoverDelegate } from '../hover/hoverDelegate2.js';
+ export const unthemedToggleStyles = {
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/toolbar/toolbar.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/toolbar/toolbar.js
+index 0bdfae1..22cf5fc 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/toolbar/toolbar.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/toolbar/toolbar.js
+@@ -9,7 +9,7 @@ import { Codicon } from '../../../common/codicons.js';
+ import { ThemeIcon } from '../../../common/themables.js';
+ import { EventMultiplexer } from '../../../common/event.js';
+ import { Disposable, DisposableStore } from '../../../common/lifecycle.js';
+-import './toolbar.css';
++// import './toolbar.css';
+ import * as nls from '../../../../nls.js';
+ import { createInstantHoverDelegate } from '../hover/hoverDelegateFactory.js';
+ /**
+diff --git a/node_modules/monaco-editor/esm/vs/base/browser/ui/tree/abstractTree.js b/node_modules/monaco-editor/esm/vs/base/browser/ui/tree/abstractTree.js
+index e0ce7c2..e776a33 100644
+--- a/node_modules/monaco-editor/esm/vs/base/browser/ui/tree/abstractTree.js
++++ b/node_modules/monaco-editor/esm/vs/base/browser/ui/tree/abstractTree.js
+@@ -24,7 +24,7 @@ import { fuzzyScore, FuzzyScore } from '../../../common/filters.js';
+ import { Disposable, DisposableStore, dispose, toDisposable } from '../../../common/lifecycle.js';
+ import { clamp } from '../../../common/numbers.js';
+ import { isNumber } from '../../../common/types.js';
+-import './media/tree.css';
++// import './media/tree.css';
+ import { localize } from '../../../../nls.js';
+ import { createInstantHoverDelegate, getDefaultHoverDelegate } from '../hover/hoverDelegateFactory.js';
+ import { autorun, constObservable } from '../../../common/observable.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/controller/textAreaHandler.js b/node_modules/monaco-editor/esm/vs/editor/browser/controller/textAreaHandler.js
+index c7c47e1..41999a4 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/controller/textAreaHandler.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/controller/textAreaHandler.js
+@@ -11,7 +11,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
+ var __param = (this && this.__param) || function (paramIndex, decorator) {
+     return function (target, key) { decorator(target, key, paramIndex); }
+ };
+-import './textAreaHandler.css';
++// import './textAreaHandler.css';
+ import * as nls from '../../../nls.js';
+ import * as browser from '../../../base/browser/browser.js';
+ import { createFastDomNode } from '../../../base/browser/fastDomNode.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/services/hoverService/hoverWidget.js b/node_modules/monaco-editor/esm/vs/editor/browser/services/hoverService/hoverWidget.js
+index 2fb6696..3b37b32 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/services/hoverService/hoverWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/services/hoverService/hoverWidget.js
+@@ -11,7 +11,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
+ var __param = (this && this.__param) || function (paramIndex, decorator) {
+     return function (target, key) { decorator(target, key, paramIndex); }
+ };
+-import './hover.css';
++// import './hover.css';
+ import { DisposableStore } from '../../../../base/common/lifecycle.js';
+ import { Emitter } from '../../../../base/common/event.js';
+ import * as dom from '../../../../base/browser/dom.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/blockDecorations/blockDecorations.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/blockDecorations/blockDecorations.js
+index 025767f..977a74c 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/blockDecorations/blockDecorations.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/blockDecorations/blockDecorations.js
+@@ -3,7 +3,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ import { createFastDomNode } from '../../../../base/browser/fastDomNode.js';
+-import './blockDecorations.css';
++// import './blockDecorations.css';
+ import { ViewPart } from '../../view/viewPart.js';
+ export class BlockDecorations extends ViewPart {
+     constructor(context) {
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight.js
+index 6bbdbc1..4fea477 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './currentLineHighlight.css';
++// import './currentLineHighlight.css';
+ import { DynamicViewOverlay } from '../../view/dynamicViewOverlay.js';
+ import { editorLineHighlight, editorLineHighlightBorder } from '../../../common/core/editorColorRegistry.js';
+ import * as arrays from '../../../../base/common/arrays.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.js
+index 080795b..40eb4cd 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/decorations/decorations.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './decorations.css';
++// import './decorations.css';
+ import { DynamicViewOverlay } from '../../view/dynamicViewOverlay.js';
+ import { HorizontalRange } from '../../view/renderingContext.js';
+ import { Range } from '../../../common/core/range.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.js
+index 3901142..42387a4 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/glyphMargin/glyphMargin.js
+@@ -4,7 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ import { createFastDomNode } from '../../../../base/browser/fastDomNode.js';
+ import { ArrayQueue } from '../../../../base/common/arrays.js';
+-import './glyphMargin.css';
++// import './glyphMargin.css';
+ import { DynamicViewOverlay } from '../../view/dynamicViewOverlay.js';
+ import { ViewPart } from '../../view/viewPart.js';
+ import { Position } from '../../../common/core/position.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.js
+index 5566ec4..a46e81a 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/indentGuides/indentGuides.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './indentGuides.css';
++// import './indentGuides.css';
+ import { DynamicViewOverlay } from '../../view/dynamicViewOverlay.js';
+ import { editorBracketHighlightingForeground1, editorBracketHighlightingForeground2, editorBracketHighlightingForeground3, editorBracketHighlightingForeground4, editorBracketHighlightingForeground5, editorBracketHighlightingForeground6, editorBracketPairGuideActiveBackground1, editorBracketPairGuideActiveBackground2, editorBracketPairGuideActiveBackground3, editorBracketPairGuideActiveBackground4, editorBracketPairGuideActiveBackground5, editorBracketPairGuideActiveBackground6, editorBracketPairGuideBackground1, editorBracketPairGuideBackground2, editorBracketPairGuideBackground3, editorBracketPairGuideBackground4, editorBracketPairGuideBackground5, editorBracketPairGuideBackground6, editorIndentGuide1, editorIndentGuide2, editorIndentGuide3, editorIndentGuide4, editorIndentGuide5, editorIndentGuide6, editorActiveIndentGuide1, editorActiveIndentGuide2, editorActiveIndentGuide3, editorActiveIndentGuide4, editorActiveIndentGuide5, editorActiveIndentGuide6 } from '../../../common/core/editorColorRegistry.js';
+ import { registerThemingParticipant } from '../../../../platform/theme/common/themeService.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lineNumbers/lineNumbers.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lineNumbers/lineNumbers.js
+index ec5713f..c328230 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lineNumbers/lineNumbers.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lineNumbers/lineNumbers.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './lineNumbers.css';
++// import './lineNumbers.css';
+ import * as platform from '../../../../base/common/platform.js';
+ import { DynamicViewOverlay } from '../../view/dynamicViewOverlay.js';
+ import { Position } from '../../../common/core/position.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.js
+index ec817b4..caccf31 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/lines/viewLines.js
+@@ -5,7 +5,7 @@
+ import { MOUSE_CURSOR_TEXT_CSS_CLASS_NAME } from '../../../../base/browser/ui/mouseCursor/mouseCursor.js';
+ import { RunOnceScheduler } from '../../../../base/common/async.js';
+ import * as platform from '../../../../base/common/platform.js';
+-import './viewLines.css';
++// import './viewLines.css';
+ import { applyFontInfo } from '../../config/domFontInfo.js';
+ import { HorizontalPosition, HorizontalRange, LineVisibleRanges } from '../../view/renderingContext.js';
+ import { VisibleLinesCollection } from '../../view/viewLayer.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.js
+index dc0a11e..0681f37 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/linesDecorations/linesDecorations.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './linesDecorations.css';
++// import './linesDecorations.css';
+ import { DecorationToRender, DedupOverlay } from '../glyphMargin/glyphMargin.js';
+ export class LinesDecorationsOverlay extends DedupOverlay {
+     constructor(context) {
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/margin/margin.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/margin/margin.js
+index 6eaa42b..9e436f8 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/margin/margin.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/margin/margin.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './margin.css';
++// import './margin.css';
+ import { createFastDomNode } from '../../../../base/browser/fastDomNode.js';
+ import { ViewPart } from '../../view/viewPart.js';
+ export class Margin extends ViewPart {
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.js
+index d373b6f..afd6735 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/marginDecorations/marginDecorations.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './marginDecorations.css';
++// import './marginDecorations.css';
+ import { DecorationToRender, DedupOverlay } from '../glyphMargin/glyphMargin.js';
+ export class MarginViewLineDecorationsOverlay extends DedupOverlay {
+     constructor(context) {
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/minimap/minimap.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/minimap/minimap.js
+index b2cf86c..ad11ac7 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/minimap/minimap.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/minimap/minimap.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './minimap.css';
++// import './minimap.css';
+ import * as dom from '../../../../base/browser/dom.js';
+ import { createFastDomNode } from '../../../../base/browser/fastDomNode.js';
+ import { GlobalPointerMoveMonitor } from '../../../../base/browser/globalPointerMoveMonitor.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.js
+index 4af8cbf..7abd17c 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/overlayWidgets/overlayWidgets.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './overlayWidgets.css';
++// import './overlayWidgets.css';
+ import { createFastDomNode } from '../../../../base/browser/fastDomNode.js';
+ import { PartFingerprints, ViewPart } from '../../view/viewPart.js';
+ import * as dom from '../../../../base/browser/dom.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.js
+index fc3b1e6..43b6296 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/rulers/rulers.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './rulers.css';
++// import './rulers.css';
+ import { createFastDomNode } from '../../../../base/browser/fastDomNode.js';
+ import { ViewPart } from '../../view/viewPart.js';
+ export class Rulers extends ViewPart {
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.js
+index 4a572d0..e5ad1b9 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/scrollDecoration/scrollDecoration.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './scrollDecoration.css';
++// import './scrollDecoration.css';
+ import { createFastDomNode } from '../../../../base/browser/fastDomNode.js';
+ import { ViewPart } from '../../view/viewPart.js';
+ export class ScrollDecorationViewPart extends ViewPart {
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.js
+index 2275e15..b9514fd 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/selections/selections.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './selections.css';
++// import './selections.css';
+ import { DynamicViewOverlay } from '../../view/dynamicViewOverlay.js';
+ import { editorSelectionForeground } from '../../../../platform/theme/common/colorRegistry.js';
+ import { registerThemingParticipant } from '../../../../platform/theme/common/themeService.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursors.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursors.js
+index 07f35e5..c87cafa 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursors.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/viewCursors/viewCursors.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './viewCursors.css';
++// import './viewCursors.css';
+ import { createFastDomNode } from '../../../../base/browser/fastDomNode.js';
+ import { TimeoutTimer } from '../../../../base/common/async.js';
+ import { ViewPart } from '../../view/viewPart.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/whitespace/whitespace.js b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/whitespace/whitespace.js
+index b392df4..59c4822 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/whitespace/whitespace.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/viewParts/whitespace/whitespace.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './whitespace.css';
++// import './whitespace.css';
+ import { DynamicViewOverlay } from '../../view/dynamicViewOverlay.js';
+ import * as strings from '../../../../base/common/strings.js';
+ import { LineRange } from '../../../common/viewLayout/viewLineRenderer.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/widget/codeEditor/codeEditorWidget.js b/node_modules/monaco-editor/esm/vs/editor/browser/widget/codeEditor/codeEditorWidget.js
+index b8f05d3..2ee594e 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/widget/codeEditor/codeEditorWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/widget/codeEditor/codeEditorWidget.js
+@@ -18,7 +18,7 @@ import { onUnexpectedError } from '../../../../base/common/errors.js';
+ import { Emitter, createEventDeliveryQueue } from '../../../../base/common/event.js';
+ import { Disposable, dispose } from '../../../../base/common/lifecycle.js';
+ import { Schemas } from '../../../../base/common/network.js';
+-import './editor.css';
++// import './editor.css';
+ import { applyFontInfo } from '../../config/domFontInfo.js';
+ import { EditorConfiguration } from '../../config/editorConfiguration.js';
+ import { TabFocus } from '../../config/tabFocus.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditor/components/accessibleDiffViewer.js b/node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditor/components/accessibleDiffViewer.js
+index f40c38c..6a71bcc 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditor/components/accessibleDiffViewer.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditor/components/accessibleDiffViewer.js
+@@ -37,7 +37,7 @@ import { localize } from '../../../../../nls.js';
+ import { AccessibilitySignal, IAccessibilitySignalService } from '../../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
+ import { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';
+ import { registerIcon } from '../../../../../platform/theme/common/iconRegistry.js';
+-import './accessibleDiffViewer.css';
++// import './accessibleDiffViewer.css';
+ const accessibleDiffViewerInsertIcon = registerIcon('diff-review-insert', Codicon.add, localize('accessibleDiffViewerInsertIcon', 'Icon for \'Insert\' in accessible diff viewer.'));
+ const accessibleDiffViewerRemoveIcon = registerIcon('diff-review-remove', Codicon.remove, localize('accessibleDiffViewerRemoveIcon', 'Icon for \'Remove\' in accessible diff viewer.'));
+ const accessibleDiffViewerCloseIcon = registerIcon('diff-review-close', Codicon.close, localize('accessibleDiffViewerCloseIcon', 'Icon for \'Close\' in accessible diff viewer.'));
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditor/diffEditorWidget.js b/node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditor/diffEditorWidget.js
+index a3b4a7e..4f56372 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditor/diffEditorWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/widget/diffEditor/diffEditorWidget.js
+@@ -18,7 +18,7 @@ import { Event } from '../../../../base/common/event.js';
+ import { toDisposable } from '../../../../base/common/lifecycle.js';
+ import { autorun, autorunWithStore, derived, disposableObservableValue, observableFromEvent, observableValue, recomputeInitiallyAndOnChange, subtransaction, transaction } from '../../../../base/common/observable.js';
+ import { derivedDisposable } from '../../../../base/common/observableInternal/derived.js';
+-import './style.css';
++// import './style.css';
+ import { EditorExtensionsRegistry } from '../../editorExtensions.js';
+ import { ICodeEditorService } from '../../services/codeEditorService.js';
+ import { StableEditorScrollState } from '../../stableEditorScroll.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/widget/markdownRenderer/browser/markdownRenderer.js b/node_modules/monaco-editor/esm/vs/editor/browser/widget/markdownRenderer/browser/markdownRenderer.js
+index 6055f26..b6900f5 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/widget/markdownRenderer/browser/markdownRenderer.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/widget/markdownRenderer/browser/markdownRenderer.js
+@@ -17,7 +17,7 @@ import { createTrustedTypesPolicy } from '../../../../../base/browser/trustedTyp
+ import { onUnexpectedError } from '../../../../../base/common/errors.js';
+ import { Emitter } from '../../../../../base/common/event.js';
+ import { DisposableStore } from '../../../../../base/common/lifecycle.js';
+-import './renderedMarkdown.css';
++// import './renderedMarkdown.css';
+ import { applyFontInfo } from '../../../config/domFontInfo.js';
+ import { ILanguageService } from '../../../../common/languages/language.js';
+ import { PLAINTEXT_LANGUAGE_ID } from '../../../../common/languages/modesRegistry.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/browser/widget/multiDiffEditor/multiDiffEditorWidgetImpl.js b/node_modules/monaco-editor/esm/vs/editor/browser/widget/multiDiffEditor/multiDiffEditorWidgetImpl.js
+index d50e160..9a0801d 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/browser/widget/multiDiffEditor/multiDiffEditorWidgetImpl.js
++++ b/node_modules/monaco-editor/esm/vs/editor/browser/widget/multiDiffEditor/multiDiffEditorWidgetImpl.js
+@@ -20,7 +20,7 @@ import { Disposable, toDisposable } from '../../../../base/common/lifecycle.js';
+ import { autorun, autorunWithStore, derived, derivedWithStore, observableFromEvent, observableValue } from '../../../../base/common/observable.js';
+ import { disposableObservableValue, globalTransaction, transaction } from '../../../../base/common/observableInternal/base.js';
+ import { Scrollable } from '../../../../base/common/scrollable.js';
+-import './style.css';
++// import './style.css';
+ import { ObservableElementSizeObserver } from '../diffEditor/utils.js';
+ import { OffsetRange } from '../../../common/core/offsetRange.js';
+ import { Selection } from '../../../common/core/selection.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/anchorSelect/browser/anchorSelect.js b/node_modules/monaco-editor/esm/vs/editor/contrib/anchorSelect/browser/anchorSelect.js
+index 2a7c451..8293b16 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/anchorSelect/browser/anchorSelect.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/anchorSelect/browser/anchorSelect.js
+@@ -15,7 +15,7 @@ var SelectionAnchorController_1;
+ import { alert } from '../../../../base/browser/ui/aria/aria.js';
+ import { MarkdownString } from '../../../../base/common/htmlContent.js';
+ import { KeyChord } from '../../../../base/common/keyCodes.js';
+-import './anchorSelect.css';
++// import './anchorSelect.css';
+ import { EditorAction, registerEditorAction, registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { Selection } from '../../../common/core/selection.js';
+ import { EditorContextKeys } from '../../../common/editorContextKeys.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/bracketMatching/browser/bracketMatching.js b/node_modules/monaco-editor/esm/vs/editor/contrib/bracketMatching/browser/bracketMatching.js
+index a99e7a2..3978039 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/bracketMatching/browser/bracketMatching.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/bracketMatching/browser/bracketMatching.js
+@@ -4,7 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ import { RunOnceScheduler } from '../../../../base/common/async.js';
+ import { Disposable } from '../../../../base/common/lifecycle.js';
+-import './bracketMatching.css';
++// import './bracketMatching.css';
+ import { EditorAction, registerEditorAction, registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { Position } from '../../../common/core/position.js';
+ import { Range } from '../../../common/core/range.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/browser/lightBulbWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/browser/lightBulbWidget.js
+index ea04c1c..3b3d3eb 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/browser/lightBulbWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/codeAction/browser/lightBulbWidget.js
+@@ -18,7 +18,7 @@ import { Codicon } from '../../../../base/common/codicons.js';
+ import { Emitter, Event } from '../../../../base/common/event.js';
+ import { Disposable } from '../../../../base/common/lifecycle.js';
+ import { ThemeIcon } from '../../../../base/common/themables.js';
+-import './lightBulbWidget.css';
++// import './lightBulbWidget.css';
+ import { GlyphMarginLane } from '../../../common/model.js';
+ import { ModelDecorationOptions } from '../../../common/model/textModel.js';
+ import { computeIndentLevel } from '../../../common/model/utils.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/codelens/browser/codelensWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/codelens/browser/codelensWidget.js
+index ed1e082..9993d65 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/codelens/browser/codelensWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/codelens/browser/codelensWidget.js
+@@ -4,7 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ import * as dom from '../../../../base/browser/dom.js';
+ import { renderLabelWithIcons } from '../../../../base/browser/ui/iconLabel/iconLabels.js';
+-import './codelensWidget.css';
++// import './codelensWidget.css';
+ import { Range } from '../../../common/core/range.js';
+ import { ModelDecorationOptions } from '../../../common/model/textModel.js';
+ class CodeLensViewZone {
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/colorPickerWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/colorPickerWidget.js
+index c212b68..e984fdc 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/colorPickerWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/colorPickerWidget.js
+@@ -11,7 +11,7 @@ import { Color, HSVA, RGBA } from '../../../../base/common/color.js';
+ import { Emitter } from '../../../../base/common/event.js';
+ import { Disposable } from '../../../../base/common/lifecycle.js';
+ import { ThemeIcon } from '../../../../base/common/themables.js';
+-import './colorPicker.css';
++// import './colorPicker.css';
+ import { localize } from '../../../../nls.js';
+ import { editorHoverBackground } from '../../../../platform/theme/common/colorRegistry.js';
+ import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/standaloneColorPickerActions.js b/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/standaloneColorPickerActions.js
+index 9257b89..e668af3 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/standaloneColorPickerActions.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/standaloneColorPickerActions.js
+@@ -7,7 +7,7 @@ import { localize, localize2 } from '../../../../nls.js';
+ import { StandaloneColorPickerController } from './standaloneColorPickerWidget.js';
+ import { EditorContextKeys } from '../../../common/editorContextKeys.js';
+ import { MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';
+-import './colorPicker.css';
++// import './colorPicker.css';
+ export class ShowOrFocusStandaloneColorPicker extends EditorAction2 {
+     constructor() {
+         super({
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/standaloneColorPickerWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/standaloneColorPickerWidget.js
+index b3cf51a..bd40ef7 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/standaloneColorPickerWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/colorPicker/browser/standaloneColorPickerWidget.js
+@@ -24,7 +24,7 @@ import { EditorContextKeys } from '../../../common/editorContextKeys.js';
+ import { IContextKeyService } from '../../../../platform/contextkey/common/contextkey.js';
+ import { DefaultDocumentColorProvider } from './defaultDocumentColorProvider.js';
+ import * as dom from '../../../../base/browser/dom.js';
+-import './colorPicker.css';
++// import './colorPicker.css';
+ import { IEditorWorkerService } from '../../../common/services/editorWorker.js';
+ let StandaloneColorPickerController = class StandaloneColorPickerController extends Disposable {
+     static { StandaloneColorPickerController_1 = this; }
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/dnd/browser/dnd.js b/node_modules/monaco-editor/esm/vs/editor/contrib/dnd/browser/dnd.js
+index d78cced..7d8b586 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/dnd/browser/dnd.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/dnd/browser/dnd.js
+@@ -4,7 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ import { Disposable } from '../../../../base/common/lifecycle.js';
+ import { isMacintosh } from '../../../../base/common/platform.js';
+-import './dnd.css';
++// import './dnd.css';
+ import { registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { Position } from '../../../common/core/position.js';
+ import { Range } from '../../../common/core/range.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/dropOrPasteInto/browser/postEditWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/dropOrPasteInto/browser/postEditWidget.js
+index 617bfba..5d1eb8a 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/dropOrPasteInto/browser/postEditWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/dropOrPasteInto/browser/postEditWidget.js
+@@ -19,7 +19,7 @@ import { toErrorMessage } from '../../../../base/common/errorMessage.js';
+ import { isCancellationError } from '../../../../base/common/errors.js';
+ import { Event } from '../../../../base/common/event.js';
+ import { Disposable, MutableDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
+-import './postEditWidget.css';
++// import './postEditWidget.css';
+ import { IBulkEditService } from '../../../browser/services/bulkEditService.js';
+ import { createCombinedWorkspaceEdit } from './edit.js';
+ import { localize } from '../../../../nls.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/find/browser/findOptionsWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/find/browser/findOptionsWidget.js
+index 5ce7d3a..91235d3 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/find/browser/findOptionsWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/find/browser/findOptionsWidget.js
+@@ -3,7 +3,7 @@
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+ import * as dom from '../../../../base/browser/dom.js';
+-import './findOptionsWidget.css';
++// import './findOptionsWidget.css';
+ import { CaseSensitiveToggle, RegexToggle, WholeWordsToggle } from '../../../../base/browser/ui/findinput/findInputToggles.js';
+ import { Widget } from '../../../../base/browser/ui/widget.js';
+ import { RunOnceScheduler } from '../../../../base/common/async.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/find/browser/findWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/find/browser/findWidget.js
+index 3db4195..83a422b 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/find/browser/findWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/find/browser/findWidget.js
+@@ -13,7 +13,7 @@ import { onUnexpectedError } from '../../../../base/common/errors.js';
+ import { toDisposable } from '../../../../base/common/lifecycle.js';
+ import * as platform from '../../../../base/common/platform.js';
+ import * as strings from '../../../../base/common/strings.js';
+-import './findWidget.css';
++// import './findWidget.css';
+ import { Range } from '../../../common/core/range.js';
+ import { CONTEXT_FIND_INPUT_FOCUSED, CONTEXT_REPLACE_INPUT_FOCUSED, FIND_IDS, MATCHES_LIMIT } from './findModel.js';
+ import * as nls from '../../../../nls.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/folding/browser/folding.js b/node_modules/monaco-editor/esm/vs/editor/contrib/folding/browser/folding.js
+index 8378a14..ab1452c 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/folding/browser/folding.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/folding/browser/folding.js
+@@ -19,7 +19,7 @@ import { KeyChord } from '../../../../base/common/keyCodes.js';
+ import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
+ import { escapeRegExpCharacters } from '../../../../base/common/strings.js';
+ import * as types from '../../../../base/common/types.js';
+-import './folding.css';
++// import './folding.css';
+ import { StableEditorScrollState } from '../../../browser/stableEditorScroll.js';
+ import { EditorAction, registerEditorAction, registerEditorContribution, registerInstantiatedEditorAction } from '../../../browser/editorExtensions.js';
+ import { EditorContextKeys } from '../../../common/editorContextKeys.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/browser/gotoErrorWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/browser/gotoErrorWidget.js
+index 38d44bc..cfe0c4f 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/browser/gotoErrorWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/gotoError/browser/gotoErrorWidget.js
+@@ -20,7 +20,7 @@ import { Emitter } from '../../../../base/common/event.js';
+ import { DisposableStore, dispose } from '../../../../base/common/lifecycle.js';
+ import { basename } from '../../../../base/common/resources.js';
+ import { splitLines } from '../../../../base/common/strings.js';
+-import './media/gotoErrorWidget.css';
++// import './media/gotoErrorWidget.css';
+ import { Range } from '../../../common/core/range.js';
+ import { peekViewTitleForeground, peekViewTitleInfoForeground, PeekViewWidget } from '../../peekView/browser/peekView.js';
+ import * as nls from '../../../../nls.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/browser/link/goToDefinitionAtPosition.js b/node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/browser/link/goToDefinitionAtPosition.js
+index 1795b4a..6602bf8 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/browser/link/goToDefinitionAtPosition.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/browser/link/goToDefinitionAtPosition.js
+@@ -16,7 +16,7 @@ import { createCancelablePromise } from '../../../../../base/common/async.js';
+ import { onUnexpectedError } from '../../../../../base/common/errors.js';
+ import { MarkdownString } from '../../../../../base/common/htmlContent.js';
+ import { DisposableStore } from '../../../../../base/common/lifecycle.js';
+-import './goToDefinitionAtPosition.css';
++// import './goToDefinitionAtPosition.css';
+ import { EditorState } from '../../../editorState/browser/editorState.js';
+ import { registerEditorContribution } from '../../../../browser/editorExtensions.js';
+ import { Range } from '../../../../common/core/range.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/browser/peek/referencesWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/browser/peek/referencesWidget.js
+index be8ff0d..e408a25 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/browser/peek/referencesWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/gotoSymbol/browser/peek/referencesWidget.js
+@@ -18,7 +18,7 @@ import { Emitter, Event } from '../../../../../base/common/event.js';
+ import { DisposableStore, dispose } from '../../../../../base/common/lifecycle.js';
+ import { Schemas } from '../../../../../base/common/network.js';
+ import { basenameOrAuthority, dirname } from '../../../../../base/common/resources.js';
+-import './referencesWidget.css';
++// import './referencesWidget.css';
+ import { EmbeddedCodeEditorWidget } from '../../../../browser/widget/codeEditor/embeddedCodeEditorWidget.js';
+ import { Range } from '../../../../common/core/range.js';
+ import { ModelDecorationOptions, TextModel } from '../../../../common/model/textModel.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/contentHoverController2.js b/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/contentHoverController2.js
+index 9228bdc..c967a75 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/contentHoverController2.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/contentHoverController2.js
+@@ -20,7 +20,7 @@ import { IKeybindingService } from '../../../../platform/keybinding/common/keybi
+ import { RunOnceScheduler } from '../../../../base/common/async.js';
+ import { isMousePositionWithinElement } from './hoverUtils.js';
+ import { ContentHoverWidgetWrapper } from './contentHoverWidgetWrapper.js';
+-import './hover.css';
++// import './hover.css';
+ import { Emitter } from '../../../../base/common/event.js';
+ // sticky hover widget which doesn't disappear on focus out and such
+ const _sticky = false;
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/hoverActions.js b/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/hoverActions.js
+index 45a1174..b3eb4cf 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/hoverActions.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/hoverActions.js
+@@ -11,7 +11,7 @@ import { GotoDefinitionAtPositionEditorContribution } from '../../gotoSymbol/bro
+ import { ContentHoverController } from './contentHoverController2.js';
+ import { HoverVerbosityAction } from '../../../common/languages.js';
+ import * as nls from '../../../../nls.js';
+-import './hover.css';
++// import './hover.css';
+ var HoverFocusBehavior;
+ (function (HoverFocusBehavior) {
+     HoverFocusBehavior["NoAutoFocus"] = "noAutoFocus";
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/hoverContribution.js b/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/hoverContribution.js
+index ab2837a..1ce3b38 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/hoverContribution.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/hoverContribution.js
+@@ -11,7 +11,7 @@ import { MarkdownHoverParticipant } from './markdownHoverParticipant.js';
+ import { MarkerHoverParticipant } from './markerHoverParticipant.js';
+ import { ContentHoverController } from './contentHoverController2.js';
+ import { MarginHoverController } from './marginHoverController.js';
+-import './hover.css';
++// import './hover.css';
+ import { AccessibleViewRegistry } from '../../../../platform/accessibility/browser/accessibleViewRegistry.js';
+ import { ExtHoverAccessibleView, HoverAccessibilityHelp, HoverAccessibleView } from './hoverAccessibleViews.js';
+ registerEditorContribution(ContentHoverController.ID, ContentHoverController, 2 /* EditorContributionInstantiation.BeforeFirstInteraction */);
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/marginHoverController.js b/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/marginHoverController.js
+index 26106b9..2ff3e5e 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/marginHoverController.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/hover/browser/marginHoverController.js
+@@ -15,7 +15,7 @@ import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.j
+ import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
+ import { RunOnceScheduler } from '../../../../base/common/async.js';
+ import { isMousePositionWithinElement } from './hoverUtils.js';
+-import './hover.css';
++// import './hover.css';
+ import { MarginHoverWidget } from './marginHoverWidget.js';
+ // sticky hover widget which doesn't disappear on focus out and such
+ const _sticky = false;
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/inPlaceReplace/browser/inPlaceReplace.js b/node_modules/monaco-editor/esm/vs/editor/contrib/inPlaceReplace/browser/inPlaceReplace.js
+index 20b8b4f..36e38dd 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/inPlaceReplace/browser/inPlaceReplace.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/inPlaceReplace/browser/inPlaceReplace.js
+@@ -23,7 +23,7 @@ import { ModelDecorationOptions } from '../../../common/model/textModel.js';
+ import { IEditorWorkerService } from '../../../common/services/editorWorker.js';
+ import * as nls from '../../../../nls.js';
+ import { InPlaceReplaceCommand } from './inPlaceReplaceCommand.js';
+-import './inPlaceReplace.css';
++// import './inPlaceReplace.css';
+ let InPlaceReplaceController = class InPlaceReplaceController {
+     static { InPlaceReplaceController_1 = this; }
+     static { this.ID = 'editor.contrib.inPlaceReplaceController'; }
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineCompletions/browser/hintsWidget/inlineCompletionsHintsWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineCompletions/browser/hintsWidget/inlineCompletionsHintsWidget.js
+index a39e76a..ead88b6 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineCompletions/browser/hintsWidget/inlineCompletionsHintsWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineCompletions/browser/hintsWidget/inlineCompletionsHintsWidget.js
+@@ -24,7 +24,7 @@ import { autorun, autorunWithStore, derived, derivedObservableWithCache, observa
+ import { derivedWithStore } from '../../../../../base/common/observableInternal/derived.js';
+ import { OS } from '../../../../../base/common/platform.js';
+ import { ThemeIcon } from '../../../../../base/common/themables.js';
+-import './inlineCompletionsHintsWidget.css';
++// import './inlineCompletionsHintsWidget.css';
+ import { Position } from '../../../../common/core/position.js';
+ import { InlineCompletionTriggerKind } from '../../../../common/languages.js';
+ import { showNextInlineSuggestionActionId, showPreviousInlineSuggestionActionId } from '../controller/commandIds.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineCompletions/browser/view/ghostTextView.js b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineCompletions/browser/view/ghostTextView.js
+index 0f2e75a..599551e 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineCompletions/browser/view/ghostTextView.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineCompletions/browser/view/ghostTextView.js
+@@ -16,7 +16,7 @@ import { Event } from '../../../../../base/common/event.js';
+ import { Disposable, toDisposable } from '../../../../../base/common/lifecycle.js';
+ import { autorun, derived, observableFromEvent, observableSignalFromEvent, observableValue } from '../../../../../base/common/observable.js';
+ import * as strings from '../../../../../base/common/strings.js';
+-import './ghostTextView.css';
++// import './ghostTextView.css';
+ import { applyFontInfo } from '../../../../browser/config/domFontInfo.js';
+ import { EditorFontLigatures } from '../../../../common/config/editorOptions.js';
+ import { Position } from '../../../../common/core/position.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/ghostTextWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/ghostTextWidget.js
+index 741ca8a..739e4fa 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/ghostTextWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/ghostTextWidget.js
+@@ -13,7 +13,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
+ };
+ import { Disposable, toDisposable } from '../../../../base/common/lifecycle.js';
+ import { derived, observableFromEvent, observableValue } from '../../../../base/common/observable.js';
+-import './inlineEdit.css';
++// import './inlineEdit.css';
+ import { Position } from '../../../common/core/position.js';
+ import { Range } from '../../../common/core/range.js';
+ import { ILanguageService } from '../../../common/languages/language.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/inlineEditHintsWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/inlineEditHintsWidget.js
+index a835ed5..758bd0e 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/inlineEditHintsWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/inlineEditHintsWidget.js
+@@ -19,7 +19,7 @@ import { equals } from '../../../../base/common/arrays.js';
+ import { Disposable, toDisposable } from '../../../../base/common/lifecycle.js';
+ import { autorun, autorunWithStore, derived, observableFromEvent } from '../../../../base/common/observable.js';
+ import { OS } from '../../../../base/common/platform.js';
+-import './inlineEditHintsWidget.css';
++// import './inlineEditHintsWidget.css';
+ import { Position } from '../../../common/core/position.js';
+ import { MenuEntryActionViewItem, createAndFillInActionBarActions } from '../../../../platform/actions/browser/menuEntryActionViewItem.js';
+ import { WorkbenchToolBar } from '../../../../platform/actions/browser/toolbar.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/inlineEditSideBySideWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/inlineEditSideBySideWidget.js
+index 6c1f611..4c95ec0 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/inlineEditSideBySideWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdit/browser/inlineEditSideBySideWidget.js
+@@ -18,7 +18,7 @@ import { Disposable, toDisposable } from '../../../../base/common/lifecycle.js';
+ import { ObservablePromise, autorun, autorunWithStore, derived, observableSignalFromEvent } from '../../../../base/common/observable.js';
+ import { derivedDisposable } from '../../../../base/common/observableInternal/derived.js';
+ import { URI } from '../../../../base/common/uri.js';
+-import './inlineEditSideBySideWidget.css';
++// import './inlineEditSideBySideWidget.css';
+ import { observableCodeEditor } from '../../../browser/observableCodeEditor.js';
+ import { EmbeddedCodeEditorWidget } from '../../../browser/widget/codeEditor/embeddedCodeEditorWidget.js';
+ import { IDiffProviderFactoryService } from '../../../browser/widget/diffEditor/diffProviderFactoryService.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdits/browser/inlineEditsWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdits/browser/inlineEditsWidget.js
+index 0395267..b708a30 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdits/browser/inlineEditsWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineEdits/browser/inlineEditsWidget.js
+@@ -16,7 +16,7 @@ import { DEFAULT_FONT_FAMILY } from '../../../../base/browser/fonts.js';
+ import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
+ import { autorun, constObservable, derived } from '../../../../base/common/observable.js';
+ import { derivedWithSetter } from '../../../../base/common/observableInternal/derived.js';
+-import './inlineEditsWidget.css';
++// import './inlineEditsWidget.css';
+ import { EditorExtensionsRegistry } from '../../../browser/editorExtensions.js';
+ import { observableCodeEditor } from '../../../browser/observableCodeEditor.js';
+ import { EmbeddedCodeEditorWidget } from '../../../browser/widget/codeEditor/embeddedCodeEditorWidget.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineProgress/browser/inlineProgress.js b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineProgress/browser/inlineProgress.js
+index d3d9765..c97a97d 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/inlineProgress/browser/inlineProgress.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/inlineProgress/browser/inlineProgress.js
+@@ -17,7 +17,7 @@ import { Codicon } from '../../../../base/common/codicons.js';
+ import { Disposable, MutableDisposable } from '../../../../base/common/lifecycle.js';
+ import { noBreakWhitespace } from '../../../../base/common/strings.js';
+ import { ThemeIcon } from '../../../../base/common/themables.js';
+-import './inlineProgressWidget.css';
++// import './inlineProgressWidget.css';
+ import { Range } from '../../../common/core/range.js';
+ import { ModelDecorationOptions } from '../../../common/model/textModel.js';
+ import { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/linkedEditing/browser/linkedEditing.js b/node_modules/monaco-editor/esm/vs/editor/contrib/linkedEditing/browser/linkedEditing.js
+index 62b4ecb..6fa6c95 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/linkedEditing/browser/linkedEditing.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/linkedEditing/browser/linkedEditing.js
+@@ -34,7 +34,7 @@ import { ILanguageFeaturesService } from '../../../common/services/languageFeatu
+ import { registerColor } from '../../../../platform/theme/common/colorRegistry.js';
+ import { ILanguageFeatureDebounceService } from '../../../common/services/languageFeatureDebounce.js';
+ import { StopWatch } from '../../../../base/common/stopwatch.js';
+-import './linkedEditing.css';
++// import './linkedEditing.css';
+ export const CONTEXT_ONTYPE_RENAME_INPUT_VISIBLE = new RawContextKey('LinkedEditingInputVisible', false);
+ const DECORATION_CLASS_NAME = 'linked-editing-decoration';
+ let LinkedEditingContribution = class LinkedEditingContribution extends Disposable {
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/links/browser/links.js b/node_modules/monaco-editor/esm/vs/editor/contrib/links/browser/links.js
+index 63d8135..b12ae01 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/links/browser/links.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/links/browser/links.js
+@@ -22,7 +22,7 @@ import * as platform from '../../../../base/common/platform.js';
+ import * as resources from '../../../../base/common/resources.js';
+ import { StopWatch } from '../../../../base/common/stopwatch.js';
+ import { URI } from '../../../../base/common/uri.js';
+-import './links.css';
++// import './links.css';
+ import { EditorAction, registerEditorAction, registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { ModelDecorationOptions } from '../../../common/model/textModel.js';
+ import { ILanguageFeatureDebounceService } from '../../../common/services/languageFeatureDebounce.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/message/browser/messageController.js b/node_modules/monaco-editor/esm/vs/editor/contrib/message/browser/messageController.js
+index 8f86162..6ee0d43 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/message/browser/messageController.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/message/browser/messageController.js
+@@ -17,7 +17,7 @@ import { alert } from '../../../../base/browser/ui/aria/aria.js';
+ import { Event } from '../../../../base/common/event.js';
+ import { isMarkdownString } from '../../../../base/common/htmlContent.js';
+ import { DisposableStore, MutableDisposable } from '../../../../base/common/lifecycle.js';
+-import './messageController.css';
++// import './messageController.css';
+ import { EditorCommand, registerEditorCommand, registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { Range } from '../../../common/core/range.js';
+ import { openLinkFromMarkdown } from '../../../browser/widget/markdownRenderer/browser/markdownRenderer.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/browser/parameterHintsWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/browser/parameterHintsWidget.js
+index aa1fd61..f5e3ae7 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/browser/parameterHintsWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/parameterHints/browser/parameterHintsWidget.js
+@@ -20,7 +20,7 @@ import { Event } from '../../../../base/common/event.js';
+ import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
+ import { escapeRegExpCharacters } from '../../../../base/common/strings.js';
+ import { assertIsDefined } from '../../../../base/common/types.js';
+-import './parameterHints.css';
++// import './parameterHints.css';
+ import { EDITOR_FONT_DEFAULTS } from '../../../common/config/editorOptions.js';
+ import { ILanguageService } from '../../../common/languages/language.js';
+ import { MarkdownRenderer } from '../../../browser/widget/markdownRenderer/browser/markdownRenderer.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/peekView/browser/peekView.js b/node_modules/monaco-editor/esm/vs/editor/contrib/peekView/browser/peekView.js
+index 1a0f17e..b2ed4b0 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/peekView/browser/peekView.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/peekView/browser/peekView.js
+@@ -19,7 +19,7 @@ import { ThemeIcon } from '../../../../base/common/themables.js';
+ import { Color } from '../../../../base/common/color.js';
+ import { Emitter } from '../../../../base/common/event.js';
+ import * as objects from '../../../../base/common/objects.js';
+-import './media/peekViewWidget.css';
++// import './media/peekViewWidget.css';
+ import { registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { ICodeEditorService } from '../../../browser/services/codeEditorService.js';
+ import { EmbeddedCodeEditorWidget } from '../../../browser/widget/codeEditor/embeddedCodeEditorWidget.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/placeholderText/browser/placeholderText.contribution.js b/node_modules/monaco-editor/esm/vs/editor/contrib/placeholderText/browser/placeholderText.contribution.js
+index 52e10c8..96efed3 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/placeholderText/browser/placeholderText.contribution.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/placeholderText/browser/placeholderText.contribution.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './placeholderText.css';
++// import './placeholderText.css';
+ import { registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { ghostTextForeground } from '../../../common/core/editorColorRegistry.js';
+ import { localize } from '../../../../nls.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/rename/browser/renameWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/rename/browser/renameWidget.js
+index b28fbce..5f07903 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/rename/browser/renameWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/rename/browser/renameWidget.js
+@@ -26,7 +26,7 @@ import { Emitter } from '../../../../base/common/event.js';
+ import { DisposableStore, toDisposable } from '../../../../base/common/lifecycle.js';
+ import { StopWatch } from '../../../../base/common/stopwatch.js';
+ import { assertType, isDefined } from '../../../../base/common/types.js';
+-import './renameWidget.css';
++// import './renameWidget.css';
+ import * as domFontInfo from '../../../browser/config/domFontInfo.js';
+ import { Position } from '../../../common/core/position.js';
+ import { Range } from '../../../common/core/range.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/snippet/browser/snippetSession.js b/node_modules/monaco-editor/esm/vs/editor/contrib/snippet/browser/snippetSession.js
+index f94c840..a780c0b 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/snippet/browser/snippetSession.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/snippet/browser/snippetSession.js
+@@ -15,7 +15,7 @@ var SnippetSession_1;
+ import { groupBy } from '../../../../base/common/arrays.js';
+ import { dispose } from '../../../../base/common/lifecycle.js';
+ import { getLeadingWhitespace } from '../../../../base/common/strings.js';
+-import './snippetSession.css';
++// import './snippetSession.css';
+ import { EditOperation } from '../../../common/core/editOperation.js';
+ import { Range } from '../../../common/core/range.js';
+ import { Selection } from '../../../common/core/selection.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/stickyScroll/browser/stickyScrollWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/stickyScroll/browser/stickyScrollWidget.js
+index 102b073..4af7d5a 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/stickyScroll/browser/stickyScrollWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/stickyScroll/browser/stickyScrollWidget.js
+@@ -7,7 +7,7 @@ import { createTrustedTypesPolicy } from '../../../../base/browser/trustedTypes.
+ import { equals } from '../../../../base/common/arrays.js';
+ import { Disposable, DisposableStore } from '../../../../base/common/lifecycle.js';
+ import { ThemeIcon } from '../../../../base/common/themables.js';
+-import './stickyScroll.css';
++// import './stickyScroll.css';
+ import { getColumnOfNodeOffset } from '../../../browser/viewParts/lines/viewLine.js';
+ import { EmbeddedCodeEditorWidget } from '../../../browser/widget/codeEditor/embeddedCodeEditorWidget.js';
+ import { Position } from '../../../common/core/position.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/suggest/browser/suggestWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/suggest/browser/suggestWidget.js
+index 8497508..7c132c3 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/suggest/browser/suggestWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/suggest/browser/suggestWidget.js
+@@ -21,7 +21,7 @@ import { Emitter, PauseableEmitter } from '../../../../base/common/event.js';
+ import { DisposableStore, MutableDisposable } from '../../../../base/common/lifecycle.js';
+ import { clamp } from '../../../../base/common/numbers.js';
+ import * as strings from '../../../../base/common/strings.js';
+-import './media/suggest.css';
++// import './media/suggest.css';
+ import { EmbeddedCodeEditorWidget } from '../../../browser/widget/codeEditor/embeddedCodeEditorWidget.js';
+ import { SuggestWidgetStatus } from './suggestWidgetStatus.js';
+ import '../../symbolIcons/browser/symbolIcons.js'; // The codicon symbol colors are defined here and must be loaded to get colors
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/symbolIcons/browser/symbolIcons.js b/node_modules/monaco-editor/esm/vs/editor/contrib/symbolIcons/browser/symbolIcons.js
+index b8572e4..49c9dd3 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/symbolIcons/browser/symbolIcons.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/symbolIcons/browser/symbolIcons.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './symbolIcons.css';
++// import './symbolIcons.css';
+ import { localize } from '../../../../nls.js';
+ import { foreground, registerColor } from '../../../../platform/theme/common/colorRegistry.js';
+ export const SYMBOL_ICON_ARRAY_FOREGROUND = registerColor('symbolIcon.arrayForeground', foreground, localize('symbolIcon.arrayForeground', 'The foreground color for array symbols. These symbols appear in the outline, breadcrumb, and suggest widget.'));
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/unicodeHighlighter/browser/bannerController.js b/node_modules/monaco-editor/esm/vs/editor/contrib/unicodeHighlighter/browser/bannerController.js
+index 705b3d3..e8bef9c 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/unicodeHighlighter/browser/bannerController.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/unicodeHighlighter/browser/bannerController.js
+@@ -11,7 +11,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './bannerController.css';
++// import './bannerController.css';
+ import { $, append, clearNode } from '../../../../base/browser/dom.js';
+ import { ActionBar } from '../../../../base/browser/ui/actionbar/actionbar.js';
+ import { Action } from '../../../../base/common/actions.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/unicodeHighlighter/browser/unicodeHighlighter.js b/node_modules/monaco-editor/esm/vs/editor/contrib/unicodeHighlighter/browser/unicodeHighlighter.js
+index c1450e2..2b85f00 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/unicodeHighlighter/browser/unicodeHighlighter.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/unicodeHighlighter/browser/unicodeHighlighter.js
+@@ -17,7 +17,7 @@ import { MarkdownString } from '../../../../base/common/htmlContent.js';
+ import { Disposable } from '../../../../base/common/lifecycle.js';
+ import * as platform from '../../../../base/common/platform.js';
+ import { InvisibleCharacters, isBasicASCII } from '../../../../base/common/strings.js';
+-import './unicodeHighlighter.css';
++// import './unicodeHighlighter.css';
+ import { EditorAction, registerEditorAction, registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { inUntrustedWorkspace, unicodeHighlightConfigKeys } from '../../../common/config/editorOptions.js';
+ import { ModelDecorationOptions } from '../../../common/model/textModel.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/wordHighlighter/browser/highlightDecorations.js b/node_modules/monaco-editor/esm/vs/editor/contrib/wordHighlighter/browser/highlightDecorations.js
+index 46b0bcb..7b282c0 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/wordHighlighter/browser/highlightDecorations.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/wordHighlighter/browser/highlightDecorations.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './highlightDecorations.css';
++// import './highlightDecorations.css';
+ import { OverviewRulerLane } from '../../../common/model.js';
+ import { ModelDecorationOptions } from '../../../common/model/textModel.js';
+ import { DocumentHighlightKind } from '../../../common/languages.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/contrib/zoneWidget/browser/zoneWidget.js b/node_modules/monaco-editor/esm/vs/editor/contrib/zoneWidget/browser/zoneWidget.js
+index c522d3b..f284611 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/contrib/zoneWidget/browser/zoneWidget.js
++++ b/node_modules/monaco-editor/esm/vs/editor/contrib/zoneWidget/browser/zoneWidget.js
+@@ -8,7 +8,7 @@ import { Color, RGBA } from '../../../../base/common/color.js';
+ import { IdGenerator } from '../../../../base/common/idGenerator.js';
+ import { DisposableStore } from '../../../../base/common/lifecycle.js';
+ import * as objects from '../../../../base/common/objects.js';
+-import './zoneWidget.css';
++// import './zoneWidget.css';
+ import { Range } from '../../../common/core/range.js';
+ import { ModelDecorationOptions } from '../../../common/model/textModel.js';
+ const defaultColor = new Color(new RGBA(0, 122, 204));
+diff --git a/node_modules/monaco-editor/esm/vs/editor/standalone/browser/iPadShowKeyboard/iPadShowKeyboard.js b/node_modules/monaco-editor/esm/vs/editor/standalone/browser/iPadShowKeyboard/iPadShowKeyboard.js
+index a267601..64d5169 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/standalone/browser/iPadShowKeyboard/iPadShowKeyboard.js
++++ b/node_modules/monaco-editor/esm/vs/editor/standalone/browser/iPadShowKeyboard/iPadShowKeyboard.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './iPadShowKeyboard.css';
++// import './iPadShowKeyboard.css';
+ import * as dom from '../../../../base/browser/dom.js';
+ import { Disposable } from '../../../../base/common/lifecycle.js';
+ import { registerEditorContribution } from '../../../browser/editorExtensions.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/standalone/browser/inspectTokens/inspectTokens.js b/node_modules/monaco-editor/esm/vs/editor/standalone/browser/inspectTokens/inspectTokens.js
+index bc78f92..8117797 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/standalone/browser/inspectTokens/inspectTokens.js
++++ b/node_modules/monaco-editor/esm/vs/editor/standalone/browser/inspectTokens/inspectTokens.js
+@@ -12,7 +12,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
+     return function (target, key) { decorator(target, key, paramIndex); }
+ };
+ var InspectTokensController_1;
+-import './inspectTokens.css';
++// import './inspectTokens.css';
+ import { $, append, reset } from '../../../../base/browser/dom.js';
+ import { Color } from '../../../../base/common/color.js';
+ import { Disposable } from '../../../../base/common/lifecycle.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickInput/standaloneQuickInputService.js b/node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickInput/standaloneQuickInputService.js
+index cc048b0..dd88c59 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickInput/standaloneQuickInputService.js
++++ b/node_modules/monaco-editor/esm/vs/editor/standalone/browser/quickInput/standaloneQuickInputService.js
+@@ -11,7 +11,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
+ var __param = (this && this.__param) || function (paramIndex, decorator) {
+     return function (target, key) { decorator(target, key, paramIndex); }
+ };
+-import './standaloneQuickInput.css';
++// import './standaloneQuickInput.css';
+ import { Event } from '../../../../base/common/event.js';
+ import { registerEditorContribution } from '../../../browser/editorExtensions.js';
+ import { IThemeService } from '../../../../platform/theme/common/themeService.js';
+diff --git a/node_modules/monaco-editor/esm/vs/editor/standalone/browser/standaloneEditor.js b/node_modules/monaco-editor/esm/vs/editor/standalone/browser/standaloneEditor.js
+index aa33e1d..a825e87 100644
+--- a/node_modules/monaco-editor/esm/vs/editor/standalone/browser/standaloneEditor.js
++++ b/node_modules/monaco-editor/esm/vs/editor/standalone/browser/standaloneEditor.js
+@@ -6,7 +6,7 @@ import { mainWindow } from '../../../base/browser/window.js';
+ import { Disposable, DisposableStore } from '../../../base/common/lifecycle.js';
+ import { splitLines } from '../../../base/common/strings.js';
+ import { URI } from '../../../base/common/uri.js';
+-import './standalone-tokens.css';
++// import './standalone-tokens.css';
+ import { FontMeasurements } from '../../browser/config/fontMeasurements.js';
+ import { EditorCommand } from '../../browser/editorExtensions.js';
+ import { ICodeEditorService } from '../../browser/services/codeEditorService.js';
+diff --git a/node_modules/monaco-editor/esm/vs/platform/actionWidget/browser/actionList.js b/node_modules/monaco-editor/esm/vs/platform/actionWidget/browser/actionList.js
+index d7de1f2..08816c2 100644
+--- a/node_modules/monaco-editor/esm/vs/platform/actionWidget/browser/actionList.js
++++ b/node_modules/monaco-editor/esm/vs/platform/actionWidget/browser/actionList.js
+@@ -19,7 +19,7 @@ import { Codicon } from '../../../base/common/codicons.js';
+ import { Disposable } from '../../../base/common/lifecycle.js';
+ import { OS } from '../../../base/common/platform.js';
+ import { ThemeIcon } from '../../../base/common/themables.js';
+-import './actionWidget.css';
++// import './actionWidget.css';
+ import { localize } from '../../../nls.js';
+ import { IContextViewService } from '../../contextview/browser/contextView.js';
+ import { IKeybindingService } from '../../keybinding/common/keybinding.js';
+diff --git a/node_modules/monaco-editor/esm/vs/platform/actionWidget/browser/actionWidget.js b/node_modules/monaco-editor/esm/vs/platform/actionWidget/browser/actionWidget.js
+index 84b2a39..d4516f7 100644
+--- a/node_modules/monaco-editor/esm/vs/platform/actionWidget/browser/actionWidget.js
++++ b/node_modules/monaco-editor/esm/vs/platform/actionWidget/browser/actionWidget.js
+@@ -14,7 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
+ import * as dom from '../../../base/browser/dom.js';
+ import { ActionBar } from '../../../base/browser/ui/actionbar/actionbar.js';
+ import { Disposable, DisposableStore, MutableDisposable } from '../../../base/common/lifecycle.js';
+-import './actionWidget.css';
++// import './actionWidget.css';
+ import { localize, localize2 } from '../../../nls.js';
+ import { acceptSelectedActionCommand, ActionList, previewSelectedActionCommand } from './actionList.js';
+ import { Action2, registerAction2 } from '../../actions/common/actions.js';
+diff --git a/node_modules/monaco-editor/esm/vs/platform/actions/browser/menuEntryActionViewItem.js b/node_modules/monaco-editor/esm/vs/platform/actions/browser/menuEntryActionViewItem.js
+index d3cfb91..dd4c7c3 100644
+--- a/node_modules/monaco-editor/esm/vs/platform/actions/browser/menuEntryActionViewItem.js
++++ b/node_modules/monaco-editor/esm/vs/platform/actions/browser/menuEntryActionViewItem.js
+@@ -19,7 +19,7 @@ import { ActionRunner, Separator, SubmenuAction } from '../../../base/common/act
+ import { UILabelProvider } from '../../../base/common/keybindingLabels.js';
+ import { combinedDisposable, MutableDisposable, toDisposable } from '../../../base/common/lifecycle.js';
+ import { isLinux, isWindows, OS } from '../../../base/common/platform.js';
+-import './menuEntryActionViewItem.css';
++// import './menuEntryActionViewItem.css';
+ import { localize } from '../../../nls.js';
+ import { IMenuService, MenuItemAction, SubmenuItemAction } from '../common/actions.js';
+ import { isICommandActionToggleInfo } from '../../action/common/action.js';
+diff --git a/node_modules/monaco-editor/esm/vs/platform/opener/browser/link.js b/node_modules/monaco-editor/esm/vs/platform/opener/browser/link.js
+index 947e844..6340935 100644
+--- a/node_modules/monaco-editor/esm/vs/platform/opener/browser/link.js
++++ b/node_modules/monaco-editor/esm/vs/platform/opener/browser/link.js
+@@ -18,7 +18,7 @@ import { EventType as TouchEventType, Gesture } from '../../../base/browser/touc
+ import { Event } from '../../../base/common/event.js';
+ import { Disposable } from '../../../base/common/lifecycle.js';
+ import { IOpenerService } from '../common/opener.js';
+-import './link.css';
++// import './link.css';
+ import { getDefaultHoverDelegate } from '../../../base/browser/ui/hover/hoverDelegateFactory.js';
+ import { IHoverService } from '../../hover/browser/hover.js';
+ let Link = class Link extends Disposable {
+diff --git a/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInput.js b/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInput.js
+index 4df569e..2578b4e 100644
+--- a/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInput.js
++++ b/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInput.js
+@@ -22,7 +22,7 @@ import { Disposable, DisposableStore } from '../../../base/common/lifecycle.js';
+ import { isIOS } from '../../../base/common/platform.js';
+ import Severity from '../../../base/common/severity.js';
+ import { ThemeIcon } from '../../../base/common/themables.js';
+-import './media/quickInput.css';
++// import './media/quickInput.css';
+ import { localize } from '../../../nls.js';
+ import { ItemActivation, NO_KEY_MODS, QuickInputButtonLocation, QuickInputHideReason, QuickPickFocus } from '../common/quickInput.js';
+ import { quickInputButtonToAction, renderQuickInputDescription } from './quickInputUtils.js';
+diff --git a/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInputBox.js b/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInputBox.js
+index efea511..7eb154e 100644
+--- a/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInputBox.js
++++ b/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInputBox.js
+@@ -6,7 +6,7 @@ import * as dom from '../../../base/browser/dom.js';
+ import { FindInput } from '../../../base/browser/ui/findinput/findInput.js';
+ import { Disposable } from '../../../base/common/lifecycle.js';
+ import Severity from '../../../base/common/severity.js';
+-import './media/quickInput.css';
++// import './media/quickInput.css';
+ const $ = dom.$;
+ export class QuickInputBox extends Disposable {
+     constructor(parent, inputBoxStyles, toggleStyles) {
+diff --git a/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInputUtils.js b/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInputUtils.js
+index a749c63..8ea5489 100644
+--- a/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInputUtils.js
++++ b/node_modules/monaco-editor/esm/vs/platform/quickinput/browser/quickInputUtils.js
+@@ -10,7 +10,7 @@ import { Gesture, EventType as GestureEventType } from '../../../base/browser/to
+ import { renderLabelWithIcons } from '../../../base/browser/ui/iconLabel/iconLabels.js';
+ import { IdGenerator } from '../../../base/common/idGenerator.js';
+ import { parseLinkedText } from '../../../base/common/linkedText.js';
+-import './media/quickInput.css';
++// import './media/quickInput.css';
+ import { localize } from '../../../nls.js';
+ const iconPathToClass = {};
+ const iconClassGenerator = new IdGenerator('quick-input-button-icon-');
+diff --git a/node_modules/monaco-editor/esm/vs/platform/severityIcon/browser/severityIcon.js b/node_modules/monaco-editor/esm/vs/platform/severityIcon/browser/severityIcon.js
+index 762dbba..a77540c 100644
+--- a/node_modules/monaco-editor/esm/vs/platform/severityIcon/browser/severityIcon.js
++++ b/node_modules/monaco-editor/esm/vs/platform/severityIcon/browser/severityIcon.js
+@@ -2,7 +2,7 @@
+  *  Copyright (c) Microsoft Corporation. All rights reserved.
+  *  Licensed under the MIT License. See License.txt in the project root for license information.
+  *--------------------------------------------------------------------------------------------*/
+-import './media/severityIcon.css';
++// import './media/severityIcon.css';
+ import { Codicon } from '../../../base/common/codicons.js';
+ import { ThemeIcon } from '../../../base/common/themables.js';
+ import Severity from '../../../base/common/severity.js';
